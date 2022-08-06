@@ -53,17 +53,20 @@ void	rush(int a, int b)
 	int	k;
 
 	k = 2;
-	ligne1(a);
-	ft_putchar('\n');
-	while (k < b)
-	{
-		ligne2(a);
-		k++;
-		ft_putchar('\n');
-	}
-	if (k == b)
+	if (a && b > 0)
 	{
 		ligne1(a);
 		ft_putchar('\n');
+		while (k < b)
+		{
+			ligne2(a);
+			k++;
+			ft_putchar('\n');
+		}
+		if (k == b)
+		{
+			ligne1(a);
+			ft_putchar('\n');
+		}
 	}
 }

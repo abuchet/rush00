@@ -6,7 +6,7 @@
 /*   By: abuchet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 13:34:15 by abuchet           #+#    #+#             */
-/*   Updated: 2022/08/06 13:34:23 by abuchet          ###   ########.fr       */
+/*   Updated: 2022/08/06 13:58:22 by abuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,17 +70,20 @@ void	rush(int a, int b)
 	int	k;
 
 	k = 2;
-	ligne1(a);
-	ft_putchar('\n');
-	while (k < b)
+	if (a && b > 0)
 	{
-		ligne2(a);
-		k++;
+		ligne1(a);
 		ft_putchar('\n');
-	}
-	if (k == b)
-	{
-		ligne3(a);
-		ft_putchar('\n');
+		while (k < b)
+		{
+			ligne2(a);
+			k++;
+			ft_putchar('\n');
+		}
+		if (k == b)
+		{
+			ligne3(a);
+			ft_putchar('\n');
+		}
 	}
 }
